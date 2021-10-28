@@ -1,0 +1,39 @@
+<% layout('layouts/boilerplate') %>
+    <div class="row">
+        <h1 class="text-center">New Movie</h1>
+        <div class="col-6 offset-3">
+            <form action="/movies" method="POST" novalidate class="validated-form">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title</label>
+                    <input class="form-control" type="text" id="title" name="movie[title]" required>
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="year">Year</label>
+                    <input class="form-control" type="number" id="year" name="movie[year]" required>
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="nominator">Nominator</label>
+                    <input class="form-control" type="text" id="nominator" name="movie[nominator]">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="posterUrl">Poster Image URL</label>
+                    <input class="form-control" type="text" id="posterUrl" name="movie[posterUrl]" required>
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="tagline">Tagline</label>
+                    <textarea class="form-control" type="text" id="tagline" name="movie[tagline]"></textarea>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-success">Add Movie</button>
+                </div>
+            </form>
+            <a href="/movies">All Movies</a>
+        </div>
+    </div>
+
+
+
+    <!--col-6 offset-3   will center it-->

@@ -1,0 +1,30 @@
+<% layout('layouts/boilerplate') %>
+
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card mb-3">
+                <img src="<%= movie.posterUrl %>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= movie.title %>
+                    </h5>
+                    <p class="card-text">
+                        <%= movie.tagline %>
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <%= movie.year %>
+                    </li>
+                    <li class="list-group-item text-muted">Nominated by <%= movie.nominator %>
+                    </li>
+                </ul>
+                <div class="card-body">
+                    <a class="card-link btn btn-info" href="/movies/<%= movie._id %>/edit ">Edit</a>
+                    <form class="d-inline" action="/movies/<%= movie._id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

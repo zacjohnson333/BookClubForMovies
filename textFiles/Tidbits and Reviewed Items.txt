@@ -1,0 +1,14 @@
+<><><><><><><><><><>
+good resource to read: https://jilles.me/getting-the-express-app-js/
+const path = require('path');	// this is a node.js native utility that does not need to be downloaded
+<><><><><><><><><><>
+app.set('views', path.join(__dirname, 'views'));	// __dirname refers to the directory in which the currently executing script resides, ergo this joins paths with current dir and the 'views' dir
+<><><><><><><><><><>
+mongoose and schema reference: https://mongoosejs.com/docs/guide.html
+<><><><><><><><><><>
+module.exports = mongoose.model('Movie', MovieSchema);	// compiles our model called 'Movie' using the schema 'MovieSchema' then exports it
+<><><><><><><><><><>
+index.js in 'seeds' folder needs to be run on it's own, apart from our node app, any time we want to seed the database
+<><><><><><><><><><>
+middleware fxn docs: https://expressjs.com/en/guide/writing-middleware.html
+<><><><><><><><><><>
